@@ -1,6 +1,5 @@
 #!/bin/sh
 
-make -C .. && cp ../asm .
 N=`echo tdc4` S=`echo $N.s` COR=`echo $N.cor` && ./asm $S && hexdump $COR > testasm && ./asm42 $S && hexdump $COR > testasm42 && diff -s testasm testasm42
 N=`echo tdc3` S=`echo $N.s` COR=`echo $N.cor` && ./asm $S && hexdump $COR > testasm && ./asm42 $S && hexdump $COR > testasm42 && diff -s testasm testasm42
 N=`echo tdc2` S=`echo $N.s` COR=`echo $N.cor` && ./asm $S && hexdump $COR > testasm && ./asm42 $S && hexdump $COR > testasm42 && diff -s testasm testasm42
